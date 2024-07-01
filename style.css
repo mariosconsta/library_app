@@ -1,7 +1,14 @@
+html,
+body {
+  padding: 0;
+  margin: auto;
+}
+
 .main_container {
   border: 3px solid red;
   display: grid;
-  grid-template-rows: 1fr 1fr 4fr 1fr;
+  grid-template-rows: 80px 80px 1fr 50px;
+  min-height: 100vh;
 }
 
 .main_container .header {
@@ -83,4 +90,13 @@
 .formBtns {
   width: 100px;
   height: 35px;
+}
+
+footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border: 3px solid blue;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }

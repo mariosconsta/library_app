@@ -12,10 +12,10 @@
       <dialog id="addBookDialog">
         <form id="newBookForm">
           <label for="bookName">Book Name</label>
-          <input type="text" id="bookName" name="bookName">
+          <input type="text" id="bookName" name="bookName" />
 
           <label for="authorName">Author</label>
-          <input type="text" id="authorName" name="authorName">
+          <input type="text" id="authorName" name="authorName" />
 
           <label for="bookGenre">Genre</label>
           <select id="bookGenre" name="bookGenre">
@@ -26,13 +26,17 @@
           </select>
 
           <label for="bookPages">Pages</label>
-          <input type="number" id="bookPages" name="bookPages">
+          <input type="number" id="bookPages" name="bookPages" />
 
-          <hr>
+          <hr />
 
           <div class="formBtnsContainer">
-            <button class="formBtns" id="confirmBtn" value="default">Confirm</button>
-            <button class="formBtns" value="cancel" formmethod="dialog">Cancel</button>
+            <button class="formBtns" id="confirmBtn" value="default">
+              Confirm
+            </button>
+            <button class="formBtns" value="cancel" formmethod="dialog">
+              Cancel
+            </button>
           </div>
         </form>
       </dialog>
@@ -45,10 +49,18 @@
         <button id="newBookBtn">New Book</button>
       </div>
 
-      <div class="books_list_container">
-    
+      <div class="books_list_container"></div>
+      <footer>
+        <p>Marios Constantinou</p>
+        <p>
+          Dummy project:
+          <a
+            href="https://www.theodinproject.com/lessons/node-path-javascript-library"
+            >Library</a
+          >
+        </p>
+        <p>The Odin Project</p>
+      </footer>
     </div>
-
-    <footer>FOOTER</footer>
   </body>
 </html>
