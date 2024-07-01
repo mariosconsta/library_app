@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <script src="code.js" defer></script>
+    <div class="main_container">
+      <dialog id="addBookDialog">
+        <form id="newBookForm">
+          <label for="bookName">Book Name</label>
+          <input type="text" id="bookName" name="bookName">
+
+          <label for="authorName">Author</label>
+          <input type="text" id="authorName" name="authorName">
+
+          <label for="bookGenre">Genre</label>
+          <select id="bookGenre" name="bookGenre">
+            <option value="default">Choose…</option>
+            <option value="Mystery">Mystery</option>
+            <option value="Thriller">Thriller</option>
+            <option value="Comedy">Comedy</option>
+          </select>
+
+          <label for="bookPages">Pages</label>
+          <input type="number" id="bookPages" name="bookPages">
+
+          <hr>
+
+          <div class="formBtnsContainer">
+            <button class="formBtns" id="confirmBtn" value="default">Confirm</button>
+            <button class="formBtns" value="cancel" formmethod="dialog">Cancel</button>
+          </div>
+        </form>
+      </dialog>
+
+      <div class="header">
+        <h1>My Library</h1>
+      </div>
+
+      <div class="top_btns_container">
+        <button id="newBookBtn">New Book</button>
+      </div>
+
+      <div class="books_list_container">
+    
+    </div>
+
+    <footer>FOOTER</footer>
+  </body>
+</html>
