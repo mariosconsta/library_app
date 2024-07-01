@@ -16,7 +16,18 @@ const book = {
 
   remove_btn_fn: function () {
     book_list_container.removeChild(this.bookCard);
+    updateNoBooksMessage();
   },
+};
+
+let updateNoBooksMessage = function () {
+  // If there are no books, fill the same with a message
+  if (book_list_container.innerHTML === "") {
+    book_list_container.appendChild(noBooksMessage);
+  } else if (document.getElementById("noBooksHeader") != null) {
+    book_list_container.removeChild(noBooksMessage);
+    console.log(document.getElementById("noBooksHeader"));
+  }
 };
 
 // create this object from a pop-up form
@@ -29,6 +40,13 @@ const lotr = Object.create(book).init(
 );
 
 let book_list_container = document.querySelector(".books_list_container");
+
+const noBooksMessage = document.createElement("h1");
+noBooksMessage.setAttribute("id", "noBooksHeader");
+noBooksMessage.textContent = "No books recorded...";
+noBooksMessage.style["textAlign"] = "center";
+
+updateNoBooksMessage();
 
 let appendBookCard = function (book) {
   // Create a container for the book card and give it a class
@@ -101,7 +119,7 @@ let appendBookCard = function (book) {
 };
 
 // When the user completes the book form and clicks add book, the function below should be called
-appendBookCard(lotr);
+// appendBookCard(lotr);
 
 const newBookBtn = document.getElementById("newBookBtn");
 const bookInfoDialog = document.getElementById("addBookDialog");
@@ -120,6 +138,7 @@ bookInfoDialog.addEventListener("close", (e) => {
   );
 });
 
+// When confirm is clicked on the form, a new book object is created and appended on the app
 confirmBtn.addEventListener("click", (event) => {
   event.preventDefault();
 
@@ -139,4 +158,6 @@ confirmBtn.addEventListener("click", (event) => {
   document.getElementById("newBookForm").reset();
 
   appendBookCard(bookObject);
+
+  updateNoBooksMessage();
 });
