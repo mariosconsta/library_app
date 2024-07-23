@@ -30,15 +30,6 @@ let updateNoBooksMessage = function () {
   }
 };
 
-// create this object from a pop-up form
-const lotr = Object.create(book).init(
-  (book_name = "Lord of the Rings"),
-  (author = "John"),
-  (gerne = "Fantasy"),
-  (pages = 1234),
-  (read = false)
-);
-
 let book_list_container = document.querySelector(".books_list_container");
 
 const noBooksMessage = document.createElement("h1");
@@ -48,6 +39,7 @@ noBooksMessage.style["textAlign"] = "center";
 
 updateNoBooksMessage();
 
+// When the user completes the book form and clicks add book, the function below should be called
 let appendBookCard = function (book) {
   // Create a container for the book card and give it a class
   const bookCardDiv = document.createElement("div");
@@ -117,9 +109,6 @@ let appendBookCard = function (book) {
   // add an event listener for the isRead button
   bookCardisReadBtn.addEventListener("click", book.isReadfn.bind(book));
 };
-
-// When the user completes the book form and clicks add book, the function below should be called
-// appendBookCard(lotr);
 
 const newBookBtn = document.getElementById("newBookBtn");
 const bookInfoDialog = document.getElementById("addBookDialog");
