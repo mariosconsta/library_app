@@ -5,19 +5,16 @@ body {
 }
 
 .main_container {
-  border: 3px solid red;
   display: grid;
   grid-template-rows: 80px 80px 1fr 50px;
   min-height: 100vh;
 }
 
 .main_container .header {
-  border: 3px solid blue;
   text-align: center;
 }
 
 .main_container .top_btns_container {
-  border: 3px solid yellow;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -25,7 +22,6 @@ body {
 }
 
 .books_list_container {
-  border: 3px solid brown;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 400px));
   align-items: center;
@@ -35,7 +31,6 @@ body {
 
 .books_list_container .book_card {
   max-width: 500px;
-  border: 3px solid green;
   display: grid;
   grid-template-rows: repeat(4, 80px);
 }
@@ -95,7 +90,6 @@ body {
 footer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  border: 3px solid blue;
   align-items: center;
   justify-content: center;
   text-align: center;
